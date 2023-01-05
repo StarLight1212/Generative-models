@@ -159,7 +159,7 @@ def p_sample_loop(model, shape, n_steps, betas, one_minus_alphas_bar_sqrt):
     for i in reversed(range(n_steps)):
         cur_x = p_sample(model, cur_x, i, betas, one_minus_alphas_bar_sqrt)
         x_seq.append(cur_x)
-    return x_seqD
+    return x_seq
 
 
 def p_sample(model, x, t, betas, one_minus_alphas_bar_sqrt):
